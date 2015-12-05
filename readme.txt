@@ -15,3 +15,10 @@ Step 4. Use Common PCL project in the Forms PCL project.
     a. Add Project Reference: In Solution Explorer -> Right Click Sample.XamarinIntellisenceIssue -> Add -> Reference.. -> Projects -> Solution -> Check Sample.XamarinIntellisenceIssue.Common -> OK
     b. Use Class1: Open App.cs -> In the end of constructor add "var class1 = new Class1();". Note that a reference "using Sample.XamarinIntellisenceIssue.Common;" is added
     c. Build Solution to ensure 0 errors (Check "Build succeeded" + "0 Errors" is reported in the Error List)
+
+Step 5. Add XAML file to the Forms PCL project - this will break Intellisence
+    a. Create a new XAML page: In Solution Explorer -> Right Click Sample.XamarinIntellisenceIssue -> Add -> New Item... -> Cross-Platform -> Forms Xaml Page; Name: Page1 -> OK
+    b. Notice new erros:
+        1. Error CS0234: The type or namespace name 'Common' does not exist in the namespace 'Sample.XamarinIntellisenceIssue' (are you missing an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\App.cs
+        2. Error CS0246: The type or namespace name 'Class1' could not be found (are you missing a using directive or an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\App.cs
+    c. Build Solution to ensure is succeeds, despite having errors (Check "Build succeeded" + "2 Errors" is reported in the Error List)
