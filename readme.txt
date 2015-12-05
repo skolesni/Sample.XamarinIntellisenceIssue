@@ -22,3 +22,9 @@ Step 5. Add XAML file to the Forms PCL project - this will break Intellisence
         1. Error CS0234: The type or namespace name 'Common' does not exist in the namespace 'Sample.XamarinIntellisenceIssue' (are you missing an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\App.cs
         2. Error CS0246: The type or namespace name 'Class1' could not be found (are you missing a using directive or an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\App.cs
     c. Build Solution to ensure is succeeds, despite having errors (Check "Build succeeded" + "2 Errors" is reported in the Error List)
+
+Step 6. Close Visual Studio and Open Again - this will produce another error:
+    a. Close/Open Visual Studio
+    b. Open Page1.xaml.cs file
+    c. Notice new error: Error CS0103: The name 'InitializeComponent' does not exist in the current context	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Page1.xaml.cs
+    d. Build Solution to ensure is succeeds, despite having errors (Check "Build succeeded" + "1 Error" is reported in the Error List)
