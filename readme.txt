@@ -10,3 +10,8 @@ Step 3. Add Common PCL project. (As this must be Profile78, the easiest way is t
     c. Uninstall Xamarin.Forms: In Solution Explorer -> Right Click Sample.XamarinIntellisenceIssue.Common -> Manage NuGet Packages... -> Installed -> Select Xamarin.Forms -> Uninstall -> OK
     d. Create a new sample class: In Solution Explorer -> Right Click Sample.XamarinIntellisenceIssue.Common -> Add -> Class; Name: Class1 -> OK
     e. Change Class1 visibility to public: Open Class1.cs -> add "public" to the class definition
+
+Step 4. Use Common PCL project in the Forms PCL project.
+    a. Add Project Reference: In Solution Explorer -> Right Click Sample.XamarinIntellisenceIssue -> Add -> Reference.. -> Projects -> Solution -> Check Sample.XamarinIntellisenceIssue.Common -> OK
+    b. Use Class1: Open App.cs -> In the end of constructor add "var class1 = new Class1();". Note that a reference "using Sample.XamarinIntellisenceIssue.Common;" is added
+    c. Build Solution to ensure 0 errors (Check "Build succeeded" + "0 Errors" is reported in the Error List)

@@ -7,6 +7,8 @@ using Xamarin.Forms;
 
 namespace Sample.XamarinIntellisenceIssue
 {
+    using Sample.XamarinIntellisenceIssue.Common;
+
     public class App : Application
     {
         public App()
@@ -25,6 +27,8 @@ namespace Sample.XamarinIntellisenceIssue
                     }
                 }
             };
+
+            var class1 = new Class1();
         }
 
         protected override void OnStart()
