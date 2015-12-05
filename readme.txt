@@ -28,3 +28,13 @@ Step 6. Close Visual Studio and Open Again - this will produce another error:
     b. Open Page1.xaml.cs file
     c. Notice new error: Error CS0103: The name 'InitializeComponent' does not exist in the current context	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Page1.xaml.cs
     d. Build Solution to ensure is succeeds, despite having errors (Check "Build succeeded" + "1 Error" is reported in the Error List)
+
+Step 7. Use Class 1 in the Page1.xaml.cs - this will produce more error:
+    a. Use Class1: Open Page1.xaml.cs -> In the end of constructor add "var class1 = new Class1();". Note that a reference "using Sample.XamarinIntellisenceIssue.Common;" is added
+    b. Create a new XAML page: In Solution Explorer -> Right Click Sample.XamarinIntellisenceIssue -> Add -> New Item... -> Cross-Platform -> Forms Xaml Page; Name: Page2 -> OK
+    c. Notice new erros:
+        1. Error CS0234: The type or namespace name 'Common' does not exist in the namespace 'Sample.XamarinIntellisenceIssue' (are you missing an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\App.cs
+        2. Error CS0234: The type or namespace name 'Common' does not exist in the namespace 'Sample.XamarinIntellisenceIssue' (are you missing an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Page1.xaml.cs
+        3. Error CS0246: The type or namespace name 'Class1' could not be found (are you missing a using directive or an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\App.cs
+        4. Error CS0246: The type or namespace name 'Class1' could not be found (are you missing a using directive or an assembly reference?)	Sample.XamarinIntellisenceIssue	D:\Development\Samples\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Sample.XamarinIntellisenceIssue\Page1.xaml.cs
+    d. Build Solution to ensure is succeeds, despite having errors (Check "Build succeeded" + "4 Errors" is reported in the Error List)

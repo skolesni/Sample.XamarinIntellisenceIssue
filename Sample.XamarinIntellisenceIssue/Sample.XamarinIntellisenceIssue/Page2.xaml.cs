@@ -8,14 +8,11 @@ using Xamarin.Forms;
 
 namespace Sample.XamarinIntellisenceIssue
 {
-    using Sample.XamarinIntellisenceIssue.Common;
-
-    public partial class Page1 : ContentPage
+    public partial class Page2 : ContentPage
     {
-        public Page1()
+        public Page2()
         {
             InitializeComponent();
-            var class1 = new Class1();
         }
     }
 }
